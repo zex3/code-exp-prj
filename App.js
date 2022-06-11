@@ -2,9 +2,9 @@ import * as React from "react";
 import { Text, View } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import Home from "./screens/Home";
-import Map from "./screens/Map";
-import Report from "./screens/Report";
+import HomeScreen from "./screens/HomeScreen";
+import MapScreen from "./screens/MapScreen";
+import ReportScreen from "./screens/ReportScreen";
 import { FontAwesome } from "@expo/vector-icons";
 
 const Tab = createBottomTabNavigator();
@@ -33,9 +33,9 @@ export default function App() {
           tabBarInactiveTintColor: "gray",
         })}
       >
-        <Tab.Screen name="Home" component={Home} />
-        <Tab.Screen name="Report" component={Report} />
-        <Tab.Screen name="Map" component={Map} />
+        <Tab.Screen name="Home" component={HomeScreen} />
+        <Tab.Screen name="Report" component={ReportScreen} />
+        <Tab.Screen name="Map" component={MapScreen} />
       </Tab.Navigator>
     </NavigationContainer>
   );

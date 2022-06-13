@@ -16,13 +16,21 @@ function ReportScreen() {
   );
 }
 
+function ReportSecondScreen() {
+  return (
+    <View style={styles.GreetingText}>
+      <Text style={styles.ChangeColor}>Report Form!</Text>
+    </View>
+  );
+}
+
 const Stack = createStackNavigator();
 
 export default function ReportStack() {
   return (
     <Stack.Navigator>
       <Stack.Screen name="Report Home" component={ReportScreen} />
-      <Stack.Screen name="Report Form" component={CameraScreen} />
+      <Stack.Screen name="Report Form" component={ReportSecondScreen} />
     </Stack.Navigator>
   );
 }

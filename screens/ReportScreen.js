@@ -1,67 +1,92 @@
 import * as React from "react";
-import { useState } from 'react';
-import { Text, View, Button, StyleSheet, Modal, FlatList, TouchableOpacity, Dimensions } from "react-native";
+import { useState } from "react";
+import {
+  Text,
+  View,
+  Button,
+  StyleSheet,
+  Modal,
+  FlatList,
+  TouchableOpacity,
+} from "react-native";
 import { createStackNavigator } from "@react-navigation/stack";
 import { useNavigation } from "@react-navigation/native";
-import { MaterialIcons } from '@expo/vector-icons';
+import { MaterialIcons } from "@expo/vector-icons";
 
 import FillReportForm from "./FillReportForm/FillReportForm.js";
 
 function ReportScreen() {
   const navigation = useNavigation();
-  const [modalOpen, setModalOpen] = useState(false)
-  const [report, setReport] = useState([])
+  const [modalOpen, setModalOpen] = useState(false);
+  const [report, setReport] = useState([
+    {
+      id: 1,
+      title: "testTitle",
+      description: "testDescriptpion",
+      location: "testLocation",
+    },
+    {
+      id: 2,
+      title: "testTitle2",
+      description: "testDescriptpion2",
+      location: "testLocation2",
+    },
+    {
+      id: 3,
+      title: "testTitle3",
+      description: "testDescriptpion3",
+      location: "testLocation3",
+    },
+  ]);
 
-  const addReport = (report) =>{
-      report.id = Math.random().toString();
-      setReport((currentReport)=>{
-        return [report, ...currentReport]
-      })
-      setModalOpen(false)
-  }
+  const addReport = (report) => {
+    report.id = Math.random().toString();
+    setReport((currentReport) => {
+      return [report, ...currentReport];
+    });
+    setModalOpen(false);
+  };
 
   return (
     <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
+      <Button
+        onPress={() => navigation.navigate("Report Form")}
+        title="Report"
+      />
 
       <Modal visible={modalOpen}>
         <View>
-          <MaterialIcons name="close" size={24} onPress={()=>setModalOpen(false)}></MaterialIcons>
-          <FillReportForm addReport={addReport}/>
+          <MaterialIcons
+            name="close"
+            size={24}
+            onPress={() => setModalOpen(false)}
+          ></MaterialIcons>
+          <Text>Modal Open</Text>
+          <FillReportForm addReport={addReport} />
         </View>
       </Modal>
 
-      <Button title="Add Reports" style={styles.Button} onPress={() => setModalOpen(true)}></Button>
-      <FlatList 
+      <MaterialIcons
+        name="add"
+        size={24}
+        onPress={() => setModalOpen(true)}
+      ></MaterialIcons>
+      <FlatList
         data={report}
-        renderItem={({item})=>(
+        renderItem={({ item }) => (
           <TouchableOpacity>
-              <View style={[box_styles.card, box_styles.shadowProp]}>
-                <View>
-                  <Text style={box_styles.heading}>
-                    {item.title}
-                  </Text>
-                </View>
-              <Text>
-                    {item.description}
-              </Text>
-              </View>
+            <Text> {item.title}</Text>
           </TouchableOpacity>
         )}
-        />
-
-
+      />
     </View>
-    
-
   );
 }
 
 function ReportSecondScreen() {
   return (
-    <View
-      style={styles.GreetingText}
-    >
-      <Text style = {styles.ChangeColor}>Report Form!</Text>
+    <View style={styles.GreetingText}>
+      <Text style={styles.ChangeColor}>Report Form!</Text>
     </View>
   );
 }
@@ -77,57 +102,14 @@ export default function ReportStack() {
   );
 }
 
-const windowWidth = Dimensions.get('window').width;
-const windowHeight = Dimensions.get('window').height;
-
 const styles = StyleSheet.create({
-  GreetingText : {
+  GreetingText: {
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "white"
+    backgroundColor: "white",
   },
-  ChangeColor : {
-    color: "red"
-},
-  Button :{
-    color: "#00008B"
-  },
-  Title:{
-    fontSize: 18,
-    fontWeight: 'bold',
-    color: '#333',
-    borderWidth: 1,
-    margin:20,
-    borderRadius: 3,
-    width: windowWidth/100*80,
-    textAlign:"center",
-    
-    shadowColor: '#171717',
-    shadowOffset: {width: -2, height: 4},
-    shadowOpacity: 0.2,
-    shadowRadius: 3,
-  }
-})
-
-const box_styles = StyleSheet.create({
-  heading: {
-    fontSize: 18,
-    fontWeight: '600',
-    marginBottom: 13,
-  },
-  card: {
-    backgroundColor: 'white',
-    borderRadius: 8,
-    paddingVertical: 45,
-    paddingHorizontal: 25,
-    width: '100%',
-    marginVertical: 10,
-  },
-  shadowProp: {
-    shadowColor: '#171717',
-    shadowOffset: {width: -2, height: 4},
-    shadowOpacity: 0.2,
-    shadowRadius: 3,
+  ChangeColor: {
+    color: "red",
   },
 });

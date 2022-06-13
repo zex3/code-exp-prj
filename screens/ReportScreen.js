@@ -2,6 +2,7 @@ import * as React from "react";
 import { Text, View, Button, StyleSheet } from "react-native";
 import { createStackNavigator } from "@react-navigation/stack";
 import { useNavigation } from "@react-navigation/native";
+import CameraScreen from "../screens/CameraScreen";
 
 function ReportScreen() {
   const navigation = useNavigation();
@@ -15,28 +16,13 @@ function ReportScreen() {
   );
 }
 
-function ReportSecondScreen() {
-  return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-        backgroundColor: "white",
-      }}
-    >
-      <Text>Report Form!</Text>
-    </View>
-  );
-}
-
 const Stack = createStackNavigator();
 
 export default function ReportStack() {
   return (
     <Stack.Navigator>
       <Stack.Screen name="Report Home" component={ReportScreen} />
-      <Stack.Screen name="Report Form" component={ReportSecondScreen} />
+      <Stack.Screen name="Report Form" component={CameraScreen} />
     </Stack.Navigator>
   );
 }

@@ -2,7 +2,6 @@ import * as React from "react";
 import { Text, View, Button, StyleSheet } from "react-native";
 import { createStackNavigator } from "@react-navigation/stack";
 import { useNavigation } from "@react-navigation/native";
-import CameraScreen from "../screens/CameraScreen";
 
 function ReportScreen() {
   const navigation = useNavigation();

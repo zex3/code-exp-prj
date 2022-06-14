@@ -3,7 +3,6 @@ import { Text, View, Button, StyleSheet } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import HomeScreen from "./screens/HomeScreen";
-import MapScreen from "./screens/MapScreen";
 import ReportStack from "./screens/ReportScreen";
 import CameraApp from "./screens/CameraScreen";
 import { FontAwesome } from "@expo/vector-icons";
@@ -23,8 +22,6 @@ export default function App() {
               iconName = focused ? "user" : "user-o";
             } else if (route.name === "Report") {
               iconName = focused ? "flag" : "flag-o";
-            } else if (route.name === "Map") {
-              iconName = focused ? "map" : "map-o";
             } else if (route.name == "Camera") {
               iconName = "camera";
             }
@@ -42,7 +39,6 @@ export default function App() {
           options={{ headerShown: false }}
           component={ReportStack}
         />
-        <Tab.Screen name="Map" component={MapScreen} />
         <Tab.Screen name="Camera" component={CameraApp} />
       </Tab.Navigator>
     </NavigationContainer>

@@ -55,20 +55,20 @@ function ReportScreen() {
       />
 
       <Modal visible={modalOpen}>
-        <View>
+        <View style={{ marginTop: 30, marginLeft: 20 }}>
           <MaterialIcons
             name="close"
-            size={24}
+            size={30}
             onPress={() => setModalOpen(false)}
           ></MaterialIcons>
-          <Text>Modal Open</Text>
+          <Text>Report Form</Text>
           <FillReportForm addReport={addReport} />
         </View>
       </Modal>
 
       <MaterialIcons
         name="add"
-        size={24}
+        size={34}
         onPress={() => setModalOpen(true)}
       ></MaterialIcons>
       <FlatList

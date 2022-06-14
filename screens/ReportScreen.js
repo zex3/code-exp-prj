@@ -21,21 +21,21 @@ function ReportScreen() {
   const [report, setReport] = useState([
     {
       id: 1,
-      title: "testTitle",
-      description: "testDescriptpion",
-      location: "testLocation",
+      title: "Report 1",
+      description: "Description",
+      location: "Location",
     },
     {
       id: 2,
-      title: "testTitle2",
-      description: "testDescriptpion2",
-      location: "testLocation2",
+      title: "Report 2",
+      description: "Description",
+      location: "Location",
     },
     {
       id: 3,
-      title: "testTitle3",
-      description: "testDescriptpion3",
-      location: "testLocation3",
+      title: "Report 3",
+      description: "Description",
+      location: "Location",
     },
   ]);
 
@@ -49,11 +49,6 @@ function ReportScreen() {
 
   return (
     <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-      <Button
-        onPress={() => navigation.navigate("Report Form")}
-        title="Report"
-      />
-
       <Modal visible={modalOpen}>
         <View style={{ marginTop: 30, marginLeft: 20 }}>
           <MaterialIcons
@@ -83,21 +78,12 @@ function ReportScreen() {
   );
 }
 
-function ReportSecondScreen() {
-  return (
-    <View style={styles.GreetingText}>
-      <Text style={styles.ChangeColor}>Report Form!</Text>
-    </View>
-  );
-}
-
 const Stack = createStackNavigator();
 
 export default function ReportStack() {
   return (
     <Stack.Navigator>
       <Stack.Screen name="Report Home" component={ReportScreen} />
-      <Stack.Screen name="Report Form" component={ReportSecondScreen} />
     </Stack.Navigator>
   );
 }

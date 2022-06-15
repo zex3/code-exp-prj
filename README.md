@@ -42,4 +42,5 @@ Refer to the [Figma link here](https://www.figma.com/file/5Z9ncpLDCIAwr84VrqSFGB
 ## Video : 
 [Youtube Video](https://youtu.be/G74Su47OOqA)
 
-
+## Research and Drafting :
+[Google Docs Link](https://docs.google.com/document/d/1UhYjmfu0RTi7SviFEee6XATJgrmfXJoGPepoixorDKI/edit?usp=sharing)

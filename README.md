@@ -17,8 +17,10 @@ Refer to the [Figma link here](https://www.figma.com/file/5Z9ncpLDCIAwr84VrqSFGB
   - Voting System 
   - Algorithm to prevent spam reports 
   - Camera Feature 
+  <img src ="" width=25% height=auto />
   - Status of Report shown as Pending/ Completed
-2. Reports near You : allows users to see what reports has been made by users aroud that area 
+2. Reports near You : allows users to see what reports has been made by users around that area 
+<img src ="https://github.com/zex3/code-exp-prj/blob/main/Prototype%20-%20NSC/Reports%20Near%20You.png?raw=true" width=25% height=auto />
 
 
 ## Advantages of our App :

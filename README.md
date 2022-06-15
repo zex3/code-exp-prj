@@ -37,3 +37,7 @@ Refer to the [Figma link here](https://www.figma.com/file/5Z9ncpLDCIAwr84VrqSFGB
 ## Discussion/ Limitations : 
 - Although this would be a great platform for feedback from NSMen, more thought needs to be put into HOW we can motivate them to use such platform. For example, do they receive any incentives? Perhaps, they may even feel that it's sufficient to have their voices heard. Further, how can we ensure that users do not abuse such a platform? 
 
+## Video : 
+[Youtube Video](https://youtu.be/G74Su47OOqA)
+
+

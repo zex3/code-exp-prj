@@ -30,5 +30,6 @@ Refer to the [Figma link here](https://www.figma.com/file/5Z9ncpLDCIAwr84VrqSFGB
   - We heard NSMen expressed that NS is a highly top-down approach, therefore, sometimes, they may not feel heard by the top. This app allows everyone to voice their concerns, allowing them to feel more heard by the top. 
   - This potentially creates a closer NS community. 
 
-## Discussion/ Limitations : Although this would be a great platform for feedback from NSMen, more thought needs to be put into HOW we can motivate them to use such platform. For example, do they receive any incentives? Perhaps, they may even feel that it's sufficient to have their voices heard. Further, how can we ensure that users do not abuse such a platform? 
+## Discussion/ Limitations : 
+- Although this would be a great platform for feedback from NSMen, more thought needs to be put into HOW we can motivate them to use such platform. For example, do they receive any incentives? Perhaps, they may even feel that it's sufficient to have their voices heard. Further, how can we ensure that users do not abuse such a platform? 
 

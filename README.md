@@ -1,6 +1,8 @@
 # CODE_EXP 2022 - App Development
 
-## Group : BrainCells
+## App Name : National Service Convenience (NSC) 
+<img src = "https://github.com/zex3/code-exp-prj/blob/main/assets/NSCLogo.png?raw=true" width =30% height = auto/>
+## Group : BrainCells, Team 69
 
 ## Contributors: Shen Hwei, Zi En, Joanne, Apurva
 
